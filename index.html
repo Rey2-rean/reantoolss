@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ReanTools — Tools Online Gratis untuk Kebutuhan Sehari-hari</title>
+<meta name="description" content="ReanTools by reancode menyediakan berbagai tools online gratis seperti image compressor, QR generator, word counter, JSON formatter, color picker, calculator, dan tools lainnya.">
+<meta property="og:title" content="ReanTools — Tools Online Gratis">
+<meta property="og:description" content="Tools gratis, hidup lebih mudah. Project portfolio by reancode.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reancode.web.id">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23111'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='bold' fill='%23F5D742' text-anchor='middle'%3ERT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="navwrap">
+    <div class="brand">
+      <div class="logo-box">RT</div>
+      <span class="brand-name">ReanTools</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-outline lang" aria-label="Ganti bahasa">🌐 EN</button>
+      <button class="btn-outline login" aria-label="Login">Login</button>
+      <button id="hamburger" aria-label="Buka menu" onclick="document.getElementById('mmenu').classList.toggle('open')"><span></span></button>
+    </div>
+  </div>
+  <nav id="mmenu" class="mobile-menu">
+    <a href="#tools">Semua Tools</a>
+    <a href="#kategori">Kategori</a>
+    <a href="#why">Tentang</a>
+    <button class="btn-outline" style="width:fit-content">🌐 Bahasa</button>
+    <button class="btn-outline" style="width:fit-content">Login</button>
+  </nav>
+</header>
+
+<section class="hero" style="border-bottom:var(--border); padding-top:60px;">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">FREE</span>
+      <h1>Tools gratis untuk kebutuhan sehari-hari.</h1>
+      <p>Berbagai alat online yang siap membantu kamu menyelesaikan tugas dengan cepat, mudah dan gratis.</p>
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="🔍 Cari tools..." aria-label="Cari tools">
+        <button aria-label="Cari" onclick="doSearch()">→</button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-title"><span class="icon-badge">⭐</span> Popular Tools</div>
+      <a href="#kategori" class="link-arrow">Lihat semua →</a>
+    </div>
+    <div class="cards-grid" id="popularGrid"></div>
+  </div>
+</section>
+
+<section id="kategori" class="cat-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-title"><span class="icon-badge">▦</span> Kategori Tools</div>
+      <a href="#" class="link-arrow">Lihat semua kategori →</a>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="sec-title" style="margin-bottom:28px;"><span class="icon-badge">💡</span> Kenapa menggunakan ReanTools?</div>
+    <div class="why-grid">
+      <div class="why-card"><h3>Gratis</h3><p>Semua tools bisa digunakan tanpa biaya.</p></div>
+      <div class="why-card"><h3>Praktis</h3><p>Tidak perlu install aplikasi.</p></div>
+      <div class="why-card"><h3>Cepat</h3><p>Proses langsung di browser.</p></div>
+      <div class="why-card"><h3>Privasi</h3><p>Sebagian besar proses tools dilakukan di browser/client-side sehingga file atau data kamu tidak perlu dikirim ke server.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--teal); border-bottom:var(--border);">
+  <div class="container">
+    <div class="soon-wrap">
+      <h2>More tools are coming.</h2>
+      <p>Kami akan terus menambahkan tools baru untuk membantu pekerjaan, belajar, coding, dan kebutuhan sehari-hari.</p>
+      <div class="soon-cards">
+        <div class="soon-card"><span class="soon-tag">COMING SOON</span><br>PDF Merger</div>
+        <div class="soon-card"><span class="soon-tag">COMING SOON</span><br>Video Compressor</div>
+        <div class="soon-card"><span class="soon-tag">COMING SOON</span><br>Resume Builder</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="padding-top:40px;">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="brand"><div class="logo-box">RT</div><span class="brand-name">ReanTools</span></div>
+        <p>Tools gratis, hidup lebih mudah.</p>
+        <div class="social">
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="GitHub">🐙</a>
+          <a href="#" aria-label="Telegram">✈</a>
+        </div>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Navigasi</h4>
+          <a href="#">Home</a><a href="#tools">All Tools</a><a href="#why">About</a><a href="#">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a><a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="made-by">Made with ❤ by ReanCode</div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ReanTools. All rights reserved.</span>
+      <span>reancode.web.id</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
